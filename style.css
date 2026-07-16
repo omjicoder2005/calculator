@@ -1,0 +1,86 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, sans-serif;
+}
+
+body {
+    background-color: #0f172a; /* Dark Background */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+}
+
+.calculator {
+    background-color: #1e293b; /* Calculator body color */
+    padding: 20px;
+    border-radius: 16px;
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.3);
+    width: 320px;
+}
+
+#display {
+    width: 100%;
+    height: 70px;
+    background-color: #0f172a;
+    border: none;
+    outline: none;
+    border-radius: 8px;
+    color: #f8fafc;
+    font-size: 2rem;
+    text-align: right;
+    padding: 15px;
+    margin-bottom: 20px;
+}
+
+.buttons {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 12px;
+}
+
+button {
+    height: 60px;
+    border-radius: 12px;
+    border: none;
+    background-color: #334155;
+    color: #f8fafc;
+    font-size: 1.25rem;
+    font-weight: 600;
+    cursor: pointer;
+    transition: background-color 0.2s, transform 0.1s;
+}
+
+button:hover {
+    background-color: #475569;
+}
+
+button:active {
+    transform: scale(0.95);
+}
+
+.operator-btn {
+    background-color: #0284c7; /* Blue color for operators */
+    color: white;
+}
+
+.operator-btn:hover {
+    background-color: #0369a1;
+}
+
+.equal-btn {
+    background-color: #ea580c; /* Orange color for equal (=) */
+    color: white;
+    grid-row: span 2; /* Iski height double ho jayegi */
+    height: 132px;
+}
+
+.equal-btn:hover {
+    background-color: #c2410c;
+}
+
+.zero-btn {
+    grid-column: span 2; /* 0 button thoda lamba dikhega */
+}
